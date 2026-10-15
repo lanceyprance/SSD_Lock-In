@@ -11,8 +11,8 @@ Mark progress by changing `☐` → `✅`.
 
 | # | Topic | Slides | Tutorial Qs | Weight | Notes | Qs done |
 |---|---|---|---|---|---|---|
-| 1 | [Bond model: Si lattice, electrons & holes, effect of T](notes/01-bond-model.md) | 21–53 | [Ch1 Q1, Q2, Q3](questions/01-bond-model.md) | ●● | ✅ | ✅ |
-| 2 | [Doping, mass action, charge neutrality → n & p](notes/02-doping-carrier-concentration.md) | 54–75 | [Ch1 Q4, Q5](questions/02-doping-carrier-concentration.md) | ●●● (used everywhere) | ✅ | ✅ |
+| 1 | [Bond model: Si lattice, electrons & holes, effect of T](notes/01-bond-model.md) | 21–53 | [Ch1 Q1, Q2, Q3](questions/01-bond-model.md) | ●● | ☐ | ☐ |
+| 2 | [Doping, mass action, charge neutrality → n & p](notes/02-doping-carrier-concentration.md) | 54–75 | [Ch1 Q4, Q5](questions/02-doping-carrier-concentration.md) | ●●● (used everywhere) | ☐ | ☐ |
 | 3 | [Drift: mobility, conductivity, resistance](notes/03-drift.md) | 76–95 | [Ch1 Q6, Q7](questions/03-drift.md) | ●● | ☐ | ☐ |
 | 4 | [Diffusion, total current, built-in field from non-uniform doping](notes/04-diffusion.md) | 96–122 | [Ch1 Q8, Q9](questions/04-diffusion.md) | ●● | ☐ | ☐ |
 | 5 | [Energy bands, Fermi-Dirac, n = Nc·e^…, intrinsic level Ei](notes/05-fermi-level.md) | 136–169 | [Ch1 Q10–Q15](questions/05-fermi-level.md) | ●●● | ☐ | ☐ |
