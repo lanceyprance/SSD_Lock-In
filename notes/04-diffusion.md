@@ -25,6 +25,53 @@ Then click to check.
 
 ---
 
+## ⭐ Learn by heart from this topic
+
+Diffusion current, for electrons and for holes:
+
+$$J_n = e\,D_n\,\frac{dn}{dx}$$
+
+$$J_p = -\,e\,D_p\,\frac{dp}{dx}$$
+
+Dₙ and Dₚ are the diffusion coefficients, in cm²/s. dn/dx and dp/dx are the slopes of the concentration, in cm⁻⁴.
+
+<br>
+
+**Memory hook:**
+Current = charge × how fast they spread × how steep the slope is.
+
+<br>
+
+**Why the minus sign on holes only:**
+Both carriers flow downhill, from high concentration to low.
+Holes are +, so current follows them.
+Electrons are −, so current goes the other way.
+
+<br>
+
+**Use it when:**
+You're given a concentration that changes with x and asked for current.
+
+<br>
+
+**Also learn how to derive the built-in field (Tutorial Q9, part 2).** Cover the right-hand column and write the steps from memory.
+
+| Step | Write this | Why |
+|---|---|---|
+| 1 | $J_n = e\mu_n nE + eD_n\dfrac{dn}{dx}$ | drift + diffusion |
+| 2 | $J_n = 0$ | nothing connected, so no net current |
+| 3 | $E = -\dfrac{D_n}{\mu_n}\,\dfrac{1}{n}\,\dfrac{dn}{dx}$ | rearrange, the e's cancel |
+| 4 | $\dfrac{D_n}{\mu_n} = \dfrac{kT}{e} = 0.026\ \text{V}$ | Einstein relation |
+| 5 | $E = -\dfrac{kT}{e}\,\dfrac{1}{n}\,\dfrac{dn}{dx}$ | the result to remember |
+| 6 | put in $n = N(x)$ and its slope | question-specific numbers |
+
+**Direction:**
+Electrons diffuse towards low doping.
+They must be pushed back, so drift goes towards high doping.
+Electrons move against E, so **E points towards low doping**.
+
+---
+
 ## 1. Carriers spread out
 
 ![Diffusion](../img/04/s97.png)

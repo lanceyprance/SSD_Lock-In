@@ -27,6 +27,40 @@ Then click to check.
 
 ---
 
+## ⭐ Learn by heart from this topic
+
+> 📌 **TO DO: learn the E_i derivation below (and draw both band diagrams from memory).** Not done yet.
+
+**1. Derive the position of E_i (Tutorial Q15).** Cover the right-hand column and write the steps from memory.
+
+| Step | Write this | Why |
+|---|---|---|
+| 1 | $n = p$, with $E_F = E_i$ | pure Si has equal electrons and holes |
+| 2 | $N_C\,e^{-(E_C - E_i)/kT} = N_V\,e^{(E_V - E_i)/kT}$ | n and p from the formula sheet |
+| 3 | $E_V = 0$, so $E_C = E_G$ | choose where energy starts |
+| 4 | $\dfrac{N_V}{N_C} = e^{(2E_i - E_G)/kT}$ | rearrange, join the exponents |
+| 5 | $\ln\!\left(\dfrac{N_V}{N_C}\right) = \dfrac{2E_i - E_G}{kT}$ | take logs |
+| 6 | $E_i = \dfrac{E_G}{2} + \dfrac{kT}{2}\ln\!\left(\dfrac{N_V}{N_C}\right)$ | solve for $E_i$ |
+
+**Numbers for Si:** $E_i = 0.56 + 0.013 \times (-0.575) \approx 0.55$ eV above $E_V$.
+
+That is just below the middle of the gap. In sketches, draw it in the middle.
+
+**Memory hook:**
+Equal n and p, take logs, and you get half the gap plus a small nudge.
+
+<br>
+
+**2. Draw the band diagrams of n-type and p-type Si (Tutorial Q12).**
+
+![n-type and p-type band diagrams](../img/05/band-n-vs-p.svg)
+
+- Same bands, same $E_G$ and same dashed $E_i$ in both.
+- Only $E_F$ moves: **near $E_C$ for n-type, near $E_V$ for p-type.**
+- Label every line.
+
+---
+
 ## 1. The band diagram
 
 ![Band edges](../img/05/s137.png)
@@ -224,7 +258,7 @@ E_F is just below E_C. What type is the silicon?
 
 $$n = N_C\, e^{-(E_C - E_F)/kT}$$
 
-$$p = N_V\, e^{-(E_F - E_V)/kT}$$
+$$p = N_V\, e^{(E_V - E_F)/kT}$$
 
 | Symbol | Means | Value for Si |
 |---|---|---|
@@ -323,19 +357,35 @@ $$\frac{n}{n_i} = e^{(E_F - E_i)/kT}$$
 
 ---
 
-**Where exactly is E_i? (Tutorial Q15)**
+**Where exactly is E_i? (Tutorial Q15)** ⭐ learn this derivation
 
-**Step 1.** Pure Si, so n = p. Use Equation 14 with E_F = E_i:
+**Step 1.** The formulas on the sheet:
 
-$$N_C\, e^{-(E_C - E_i)/kT} = N_V\, e^{-(E_i - E_V)/kT}$$
+$$n = N_C\, e^{-(E_C - E_F)/kT} \qquad\qquad p = N_V\, e^{(E_V - E_F)/kT}$$
 
-**Step 2.** Set E_V = 0, so E_C = E_G.
+**Step 2.** Pure Si, so $E_F$ becomes $E_i$:
 
-**Step 3.** Take logs and solve for E_i:
+$$n = N_C\, e^{-(E_C - E_i)/kT} \qquad\qquad p = N_V\, e^{(E_V - E_i)/kT}$$
+
+**Step 3.** Pure Si has equal electrons and holes, so $n = p$:
+
+$$N_C\, e^{-(E_C - E_i)/kT} = N_V\, e^{(E_V - E_i)/kT}$$
+
+**Step 4.** Set $E_V = 0$, so $E_C = E_G$:
+
+$$N_C\, e^{-(E_G - E_i)/kT} = N_V\, e^{-E_i/kT}$$
+
+**Step 5.** Divide both sides by $N_C$ and by $e^{-E_i/kT}$. Dividing powers means subtracting exponents:
+
+$$\frac{N_V}{N_C} = e^{[-(E_G - E_i) + E_i]/kT} = e^{(2E_i - E_G)/kT}$$
+
+**Step 6.** Take logs and solve for $E_i$:
+
+$$\ln\!\left(\frac{N_V}{N_C}\right) = \frac{2E_i - E_G}{kT}$$
 
 $$E_i = \frac{E_G}{2} + \frac{kT}{2}\ln\!\left(\frac{N_V}{N_C}\right)$$
 
-**Step 4.** Put in numbers for Si:
+**Step 7.** Put in numbers for Si:
 
 E_i = 1.12 ÷ 2 + 0.013 × ln(1.8 ÷ 3.2)
 
@@ -343,7 +393,7 @@ E_i = 0.56 + 0.013 × (−0.575)
 
 E_i ≈ **0.55 eV above E_V**
 
-So E_i sits **just below the middle** of the gap. For sketches, put it at the middle.
+So E_i sits **just below the middle** of the gap. For sketches, put it in the middle.
 
 <br>
 
@@ -374,6 +424,8 @@ E_F − E_i = 0.026 × 13.4 = **0.35 eV**
    - p-type: between E_V and E_i, close to E_V
    - intrinsic: on top of E_i
 5. Label every line.
+
+![n-type and p-type band diagrams](../img/05/band-n-vs-p.svg)
 
 ---
 

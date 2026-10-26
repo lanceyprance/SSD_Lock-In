@@ -131,4 +131,194 @@ The sign comes from the charge q. The size is the same formula: v = μE.
 
 📍 [Notes 03 §1, Equations 6 and 7](notes/03-drift.md)
 
+<br>
+
+**Q: How do I know μₙ and μₚ for the Q7 samples?**
+
+You read them off the mobility graph. Red line is μₙ, blue line is μₚ.
+
+1. Find the doping on the bottom axis.
+2. Go up to the right line.
+3. Read across to the side.
+
+Use the **total doping** (acceptors plus donors). Only one is non-zero in each Q7 sample.
+
+For n-type samples you need μₙ. For p-type samples you need μₚ.
+
+The notes also give a table of values, and the official answers use those. Use the table.
+
+📍 [Notes 03 §4](notes/03-drift.md)
+
+<br>
+
+**Q: The mobility graph doesn't start at 0. What do I read for the undoped sample?**
+
+The bottom axis is logarithmic, so 0 can't be on it. The graph starts at 10¹⁴.
+
+Both lines go flat on the left. That flat part is the undoped value.
+
+For sample 1 (intrinsic), use the flat left end: μₙ = 1400 and μₚ = 500.
+
+📍 [Notes 03 §4](notes/03-drift.md)
+
+<br>
+
+**Q: How do I derive σ = e(nμₙ + pμₚ)?**
+
+Current is moving charge, so J = e n v for each carrier type.
+
+Electrons: J = e n μₙ E. Holes: J = e p μₚ E.
+
+Add them, then compare with J = σE.
+
+📍 [Notes 03 §6, "Where Equation 8 comes from"](notes/03-drift.md)
+
+---
+
+## Topic 4 — Diffusion and the built-in field
+
+**Q: Q9 part 1. How was the n(x) and p(x) sketch made?**
+
+Doping is the majority concentration, so n ≈ N(x). That is a straight line down to 0 at x = 0.04.
+
+Holes follow from p = nᵢ²/n. Small n means big p, so p rises towards the right.
+
+Use the calculator table for a few x values, then plot.
+
+📍 [Notes 04 §7](notes/04-diffusion.md), [Notes 01 §5](notes/01-bond-model.md)
+
+<br>
+
+**Q: Q9 part 2. How do I derive the built-in field?**
+
+No current flows, so Jₙ = 0. That means drift cancels diffusion.
+
+Rearrange for E, then swap Dₙ/μₙ for kT/e (Einstein).
+
+Put in n = N(x) and its slope. Result: E(x) = 0.065/(0.1 − 2.5x) V/cm.
+
+⭐ Learn this derivation.
+
+📍 [Notes 04, learn-by-heart box and §7](notes/04-diffusion.md)
+
+<br>
+
+**Q: Q9 part 3. Which way does the field point?**
+
+Electrons diffuse right, from high doping to low doping.
+
+The field must push them back left. Electrons move against E, so E points right.
+
+This matches the positive answer from part 2.
+
+📍 [Notes 04 §7, "Direction"](notes/04-diffusion.md)
+
+---
+
+## Topic 5 — Energy bands and the Fermi level
+
+**Q: How do I know k (Boltzmann constant)?**
+
+It's given: k = 8.62 × 10⁻⁵ eV/K. If it isn't, k = 0.026 eV ÷ 300 K ≈ 8.7 × 10⁻⁵ eV/K.
+
+📍 [Notes 05](notes/05-fermi-level.md)
+
+<br>
+
+**Q: What is the difference between n-type and p-type band diagrams?**
+
+Only E_F moves. n-type: E_F near E_C (lots of electrons). p-type: E_F near E_V (lots of holes). E_C, E_V, E_G and E_i stay the same.
+
+📍 [Notes 05, drawing checklist](notes/05-fermi-level.md)
+
+<br>
+
+**Q: What is E_i?**
+
+The Fermi level of pure Si, near the middle of the gap. E_F above it means n-type, below it means p-type.
+
+📍 [Notes 05 §7](notes/05-fermi-level.md)
+
+<br>
+
+**Q: Q13. What is it asking, and what do I do?**
+
+Derive n = nᵢ e^((E_F − E_i)/kT). Write n for any sample, write it for pure Si (E_F = E_i, n = nᵢ), divide. N_C cancels. Same for p.
+
+📍 [Notes 05 §7, Equation 15](notes/05-fermi-level.md)
+
+<br>
+
+**Q: Q15. Derive the position of E_i.** ⭐ Learn this derivation.
+
+Set n = p with E_F = E_i, put E_V = 0 so E_C = E_G, take logs. E_i = E_G/2 + (kT/2) ln(N_V/N_C) ≈ 0.55 eV above E_V.
+
+📍 [Notes 05, learn-by-heart box and §7](notes/05-fermi-level.md)
+
+<br>
+
+**Q: How does n = N_C e^(−(E_C − E_F)/kT) turn into E_F − E_i = kT ln(N_D/nᵢ)?**
+
+Write the first formula twice, once for your sample and once for pure Si (E_F = E_i, n = nᵢ). Divide. N_C cancels.
+
+n ÷ nᵢ = e^((E_F − E_i)/kT)
+
+Take ln, then swap n for N_D (n-type: n = N_D).
+
+E_F − E_i = kT ln(N_D ÷ nᵢ)
+
+📍 [Notes 05 §7, Equation 15](notes/05-fermi-level.md)
+
+<br>
+
+**Q: Is E_F − E_i = kT ln(N_D/nᵢ) on the formula sheet?**
+
+Not in that form.
+
+The sheet has n = N_C e^(−(E_C − E_F)/kT) (and the p version). Flip it and you get E_C − E_F = kT ln(N_C ÷ n). That does the same job with only sheet values.
+
+📍 [Notes 05 §6](notes/05-fermi-level.md), [formula-sheet.md](formula-sheet.md)
+
+---
+
+## Topic 8 — Bringing materials into contact
+
+**Q: Ch2 Q2. What is it asking, and what do I do?**
+
+Draw n-Si and p-Si before contact. Same E_vac, same E_C and E_V heights. Only E_F is different.
+
+n-side E_F is high (near E_C). p-side E_F is low (near E_V).
+
+📍 [Notes 08 §2](notes/08-contact.md)
+
+<br>
+
+**Q: What are E_vac, χ, φ and IE in the Ch2 Q2 diagram?**
+
+E_vac is the free-electron level. It's the ceiling, drawn once for both sides.
+
+χ: E_vac down to E_C. 4.05 eV for Si, same on both sides.
+
+φ: E_vac down to E_F. It changes with doping.
+
+IE: E_vac down to E_V. χ + E_G = 4.05 + 1.12 = 5.17 eV.
+
+📍 [Notes 06](notes/06-workfunction.md), [Notes 08 §2](notes/08-contact.md)
+
+<br>
+
+**Q: How do we get E_C − E_F = 0.12 eV and 0.95 eV, and φ = 4.17 eV and 5 eV?**
+
+Same formula both sides:
+
+E_C − E_F = kT ln(N_C ÷ n)
+
+n-Si: n = N_D, so 0.026 × ln(3.2×10¹⁹ ÷ 3×10¹⁷) = 0.12 eV.
+
+p-Si: n = nᵢ² ÷ N_A = 4.2×10³, so 0.026 × ln(3.2×10¹⁹ ÷ 4.2×10³) = 0.95 eV.
+
+Then φ = χ + (E_C − E_F) = 4.05 + 0.12 = 4.17 eV, and 4.05 + 0.95 = 5.0 eV.
+
+📍 [Notes 08 §2](notes/08-contact.md), [Notes 06 §3](notes/06-workfunction.md)
+
 ---
