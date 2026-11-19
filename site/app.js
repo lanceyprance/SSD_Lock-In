@@ -1,10 +1,10 @@
-/* SSD Lock-In practice site.
+/* SSD Lock-In practice site (EEEN20070 final).
    Reads the markdown in questions/ and mock/ at runtime, so editing the .md files
    updates the site. No build step. */
 (() => {
 'use strict';
 
-const REPO_BLOB = 'https://github.com/albinjoby82-ops/SSD_Lock-In/blob/main/';
+const REPO_BLOB = 'https://github.com/lanceyprance/SSD_Lock-In/blob/main/';
 const app = document.getElementById('app');
 
 // ---------------------------------------------------------------- storage
@@ -116,30 +116,46 @@ async function load(path) {
 }
 
 const FALLBACK_TOPICS = [
-  [1, 'Bond model', '01-bond-model', 1], [2, 'Doping, mass action, charge neutrality', '02-doping-carrier-concentration', 1],
-  [3, 'Drift', '03-drift', 1], [4, 'Diffusion', '04-diffusion', 1], [5, 'Fermi level', '05-fermi-level', 1],
-  [6, 'Workfunction', '06-workfunction', 1], [7, 'Bands under a field', '07-bands-under-field', 1],
-  [8, 'Bringing materials into contact', '08-contact', 2], [9, 'Metal–semiconductor', '09-metal-semiconductor', 2],
-  [10, 'pn diode at zero bias', '10-pn-zero-bias', 2], [11, 'pn diode under bias', '11-pn-under-bias', 2],
-  [12, 'Minority carrier injection', '12-minority-injection', 2], [13, 'Diode current', '13-diode-current', 2],
+  [1, 'Bond model', '01-bond-model', 1],
+  [2, 'Doping, mass action, charge neutrality', '02-doping-carrier-concentration', 1],
+  [3, 'Drift', '03-drift', 1],
+  [4, 'Diffusion', '04-diffusion', 1],
+  [5, 'Fermi level', '05-fermi-level', 1],
+  [6, 'Workfunction', '06-workfunction', 1],
+  [7, 'Bands under a field', '07-bands-under-field', 1],
+  [8, 'Bringing materials into contact', '08-contact', 2],
+  [9, 'Metal–semiconductor', '09-metal-semiconductor', 2],
+  [10, 'pn diode at zero bias', '10-pn-zero-bias', 2],
+  [11, 'pn diode under bias', '11-pn-under-bias', 2],
+  [12, 'Minority carrier injection', '12-minority-injection', 2],
+  [13, 'Diode current', '13-diode-current', 2],
   [14, 'Depletion width', '14-depletion-width', 2],
+  [15, 'MOS capacitor', '15-mos-capacitor', 3],
+  [16, 'MOS capacitance–voltage', '16-mos-cv', 3],
+  [17, 'MOSFET current', '17-mosfet-current', 3],
+  [18, 'MOSFET types', '18-mosfet-types', 3],
+  [19, 'MOSFET small signal', '19-mosfet-small-signal', 3],
+  [20, 'BJT operation', '20-bjt-operation', 4],
+  [21, 'BJT currents and gain', '21-bjt-currents', 4],
+  [22, 'BJT small signal', '22-bjt-small-signal', 4],
 ].map(([n, title, slug, ch]) => ({ n, title, slug, ch, file: `questions/${slug}.md`, notes: `notes/${slug}.md`, weight: '', tutQs: '' }));
 
+const CHAPTERS = {};
 async function loadIndex() {
   let topics = [], mocks = [];
   try {
     const t = await load('TOPICS.md');
-    let ch = 1;
+    let ch = 0;
     for (const line of t.split('\n')) {
-      const c = line.match(/^##\s+Chapter\s+(\d)/i); if (c) ch = +c[1];
+      const c = line.match(/^##\s+(Chapters?\s+[^:]+):\s*(.*)$/i); if (c) { ch++; CHAPTERS[ch] = c[1] + ' · ' + c[2].replace(/\s*\(.*\)\s*$/, ''); }
       const m = line.match(/^\|\s*(\d+)\s*\|\s*\[([^\]]+)\]\((notes\/[^)]+)\)\s*\|[^|]*\|\s*\[([^\]]+)\]\((questions\/([^)]+)\.md)\)\s*\|\s*([^|]*)\|/);
       if (m) topics.push({ n: +m[1], title: m[2], notes: m[3], tutQs: m[4], file: m[5], slug: m[6], ch, weight: m[7].trim() });
-      const k = line.match(/\[([^\]]*(?:Mock|Wrap)[^\]]*)\]\((mock\/midterm-(\d+)\.md)\)\s*(\(([^)]*)\))?/i);
-      if (k && line.startsWith('|')) mocks.push({ title: k[1], file: k[2], id: k[3], note: k[5] || '', wrap: (/wrap/i.test(k[1]) && +((k[1].match(/Ch\s*(\d)/i) || [])[1] || 0)) || 0 });
+      const k = line.match(/\[([^\]]*(?:Mock|Wrap|Final)[^\]]*)\]\(((mock|papers)\/([a-z0-9-]+)\.md)\)\s*(\(([^)]*)\))?/i);
+      if (k && line.startsWith('|')) mocks.push({ title: k[1], file: k[2], id: k[4], paper: k[3] === 'papers', note: k[6] || '', wrap: (/wrap/i.test(k[1]) && +((k[1].match(/Ch\s*(\d)/i) || [])[1] || 0)) || 0 });
     }
   } catch (e) { console.warn(e); }
   if (!topics.length) topics = FALLBACK_TOPICS;
-  if (!mocks.length) mocks = [1, 2].map(i => ({ title: 'Mock Midterm ' + i, file: `mock/midterm-${i}.md`, id: String(i), note: '' }));
+  if (!mocks.length) mocks = [1, 2, 3].map(i => ({ title: 'Mock Final ' + i, file: `mock/final-${i}.md`, id: 'final-' + i, note: '' }));
   return { topics, mocks };
 }
 
@@ -169,11 +185,11 @@ function cleanIntro(s) {
 const trimBlock = arr => arr.join('\n').replace(/\n\s*---\s*$/g, '').replace(/^\s*---\s*\n/, '').trim();
 
 function finish(q, topic) {
-  const m = q.heading.match(/^([A-Za-z]*\d+[a-z]*)\s*[:.]?\s*(.*)$/);
+  const m = q.heading.match(/^([A-Za-z]*\d+(?:-\d+[a-z]*)?[a-z]*)\s*[:.]?\s*(.*)$/);
   const qid = m ? m[1] : q.heading;
   let title = m ? m[2] : '';
   let tut = '';
-  const tm = title.match(/\((Tutorial[^)]*)\)/i);
+  const tm = title.match(/\(((?:Tutorial|Final)[^)]*)\)/i);
   if (tm) { tut = tm[1]; title = title.replace(tm[0], '').trim(); }
   const body = trimBlock(q.body), ans = trimBlock(q.ans);
   // every "From:" line in the answer, one per part, so a multi-part question points at all its notes
@@ -259,7 +275,7 @@ const MARK_LABEL = { got: '✓ Got it', part: '~ Partly', miss: '✗ Missed' };
 function typeLabel(q) {
   if (q.type === 'tf') return 'True / false';
   if (q.type === 'mcq') return 'Multiple choice';
-  return q.part === 'tut' ? 'Tutorial' : 'Midterm-style';
+  return q.part === 'tut' ? 'Tutorial' : 'Exam-style';
 }
 
 function renderCard(q, { showTopic = false, index } = {}) {
@@ -590,7 +606,8 @@ function tallyOf(qs) {
 const tallyHTML = t => `<b class="g">✓ ${t.got}</b><b class="p">~ ${t.part}</b><b class="m">✗ ${t.miss}</b><span>${t.left} not tried</span>`;
 const barHTML = t => t.total ? `<div class="bar"><i class="g" style="width:${100 * t.got / t.total}%"></i><i class="p" style="width:${100 * t.part / t.total}%"></i><i class="m" style="width:${100 * t.miss / t.total}%"></i></div>` : '';
 const weightText = w => { const dots = (w.match(/●/g) || []).length; return dots ? `<span class="dots" title="${esc(w)}">${'●'.repeat(dots)}</span> ${dots >= 3 ? 'must know' : dots === 2 ? 'should know' : 'skim'}` : ''; };
-const tutOrder = q => { const m = (q.tut || '').match(/Ch(\d)\s*Q(\d+)([a-z]*)/i); return m ? (+m[1]) * 1000 + (+m[2]) * 10 + (m[3] ? m[3].charCodeAt(0) - 96 : 0) : 99999; };
+const sub3 = s => s ? s.charCodeAt(0) - 96 : 0;
+const tutOrder = q => { const t = q.tut || ''; const m = t.match(/Ch\s*(\d)\s*Q(\d+)\s*([a-z]*)/i); if (m) return (+m[1]) * 1000 + (+m[2]) * 10 + sub3(m[3]); const e = t.match(/Final\s*(\d{4})\s*Q(\d)\s*([a-z]*)/i); if (e) return 10000 + (2018 - +e[1]) * 100 + (+e[2]) * 10 + sub3(e[3]); return 99999; };
 
 // ---------------------------------------------------------------- views
 async function viewHome(seq) {
@@ -602,20 +619,19 @@ async function viewHome(seq) {
   app.innerHTML = '';
   app.append(h(`<section class="hero">
     <h1>Solid State Devices practice</h1>
-    <p class="sub">EEEN20070 midterm · Ch1 Semiconductors + Ch2 Junctions &amp; pn diodes</p>
-    ${todayCard()}
+    <p class="sub">EEEN20070 final · Wed 16 Dec · 3 questions (40 + 30 + 30) · formula sheet given</p>
     <div class="modes">
-      <a class="mode primary" href="#/plan"><span class="ic">📅</span><b>3-day plan</b><small>Your checklist for Sat, Sun and Mon, SSD and CE</small></a>
+      <a class="mode primary" href="#/drill/tutorial"><span class="ic">🎯</span><b>Tutorial drill</b><small>All ${tutCount} tutorial and past-final questions, Ch1 → Ch3, then 2018 → 2014</small></a>
       <a class="mode" href="#/repeat"><span class="ic">🔁</span><b>Repetition</b><small>${repHomeText()}</small></a>
-      <a class="mode" href="#/drill/tutorial"><span class="ic">🎯</span><b>Tutorial drill</b><small>All ${tutCount} tutorial questions, Ch1 Q1 → Ch2 Q13, in order</small></a>
-      <a class="mode" href="#/drill/weak"><span class="ic">🔁</span><b>Weak spots</b><small>${weak ? weak + ' question' + (weak > 1 ? 's' : '') + ' you marked missed or partly' : 'Mark questions as you go, then redo the ones you missed'}</small></a>
+      <a class="mode" href="#/drill/weak"><span class="ic">🩹</span><b>Weak spots</b><small>${weak ? weak + ' question' + (weak > 1 ? 's' : '') + ' you marked missed or partly' : 'Mark questions as you go, then redo the ones you missed'}</small></a>
       <a class="mode" href="#/drill/random"><span class="ic">🎲</span><b>Random 10</b><small>Mixed questions from every topic</small></a>
     </div>
     <div class="tally" style="margin-top:18px">${tallyHTML(all)}</div>${barHTML(all)}
   </section>`));
-  for (const ch of [1, 2]) {
+  const chIds = [...new Set(topics.map(t => t.ch))];
+  for (const ch of chIds) {
     const list = topics.filter(t => t.ch === ch); if (!list.length) continue;
-    const sec = h(`<section><h2>Chapter ${ch} · ${ch === 1 ? 'Semiconductors' : 'Junctions &amp; pn diodes'}</h2><div class="topics"></div></section>`);
+    const sec = h(`<section><h2>${esc(CHAPTERS[ch] || 'Chapter ' + ch)}</h2><div class="topics"></div></section>`);
     for (const t of list) {
       const p = await topicQs(t); fresh(seq); const tl = tallyOf(p.qs);
       const pct = tl.total ? Math.round(100 * tl.got / tl.total) : 0;
@@ -623,7 +639,7 @@ async function viewHome(seq) {
       sec.querySelector('.topics').append(h(`<a class="topic" href="#/topic/${String(t.n).padStart(2, '0')}">
         <span class="num">${t.n}</span>
         <span><span class="t">${pretty(t.title)}</span>
-          <span class="meta">${weightText(t.weight)}${t.tutQs ? `<span>Tutorial ${esc(t.tutQs)}</span>` : ''}<span>${tl.total} questions</span></span>${barHTML(tl)}</span>
+          <span class="meta">${weightText(t.weight)}${t.tutQs ? `<span>${esc(t.tutQs)}</span>` : ''}<span>${tl.total} questions</span></span>${barHTML(tl)}</span>
         <svg class="ring" viewBox="0 0 46 46" aria-label="${pct}% got right"><circle cx="23" cy="23" r="18" fill="none" stroke="var(--line)" stroke-width="5"/>
           <circle cx="23" cy="23" r="18" fill="none" stroke="var(--good)" stroke-width="5" stroke-linecap="${pct ? 'round' : 'butt'}" stroke-dasharray="${C * pct / 100} ${C}" transform="rotate(-90 23 23)"/>
           <text x="23" y="27" text-anchor="middle">${pct}%</text></svg></a>`));
@@ -636,9 +652,15 @@ async function viewHome(seq) {
     }
     app.append(sec);
   }
-  const ms = h(`<section><h2>Mock midterms</h2><p class="sub">Do these after the topics. Timed, closed book, formula sheet only.</p><div class="modes"></div></section>`);
-  mocks.filter(m => !m.wrap).forEach(m => ms.querySelector('.modes').append(mockCard(m, '📝')));
+  const ms = h(`<section><h2>Mock finals</h2><p class="sub">Do these after the topics. Timed, closed book, formula sheet only.</p><div class="modes"></div></section>`);
+  mocks.filter(m => !m.wrap && !m.paper).forEach(m => ms.querySelector('.modes').append(mockCard(m, '📝')));
   app.append(ms);
+  const ps = mocks.filter(m => m.paper);
+  if (ps.length) {
+    const pp = h(`<section><h2>Past finals</h2><p class="sub">The real papers, 2018 → 2014, with the official answers. Same layout as your exam.</p><div class="modes"></div></section>`);
+    ps.forEach(m => pp.querySelector('.modes').append(mockCard(m, '🗂️')));
+    app.append(pp);
+  }
   const foot = h(`<footer class="foot"><p>Questions are read straight from the <a href="${REPO_BLOB.replace('/blob/main/', '')}" target="_blank" rel="noopener">repo</a>'s <code>questions/</code> and <code>mock/</code> folders. Your progress is saved in this browser only.</p><button>Reset all my progress</button></footer>`);
   foot.querySelector('button').onclick = () => { if (confirm('Clear all your marks and mock scores?')) { store.clearAll(); route(); } };
   app.append(foot);
@@ -653,11 +675,11 @@ async function viewTopic(n, seq) {
   const prev = INDEX.topics[idx - 1], next = INDEX.topics[idx + 1];
   app.append(h(`<div><div class="crumb"><a href="#/">← All topics</a></div>
     <h1>Topic ${t.n}: ${pretty(t.title)}</h1>
-    <p class="sub">${weightText(t.weight)}${t.tutQs ? ` · Tutorial ${esc(t.tutQs)}` : ''} · <a href="#" data-notes="${t.n}">📖 Open the notes</a></p></div>`));
-  app.append(h(`<ol class="howto"><li><b>Try it</b> on paper first</li><li><b>Check</b> the answer step by step</li><li><b>📖 Read the notes</b> it uses (they open beside the question)</li><li><b>🔀 New numbers:</b> do it again cold</li></ol>`));
+    <p class="sub">${weightText(t.weight)}${t.tutQs ? ` · ${esc(t.tutQs)}` : ''} · <a href="#" data-notes="${t.n}">📖 Open the notes</a></p></div>`));
+  app.append(h(`<ol class="howto"><li><b>Try it</b> on paper first</li><li><b>Check</b> the answer step by step</li><li><b>📖 Read the notes</b> it uses (they open beside the question)</li><li><b>Mark yourself</b> ✓ ~ ✗ so weak spots come back</li></ol>`));
   if (p.intro) app.append(h(`<div class="intro md">${md(p.intro, 'questions/')}</div>`));
   const bar = h(`<div class="filters"><div class="seg">
-      <button data-f="all">All</button><button data-f="tut">Tutorial</button><button data-f="mid">Midterm-style</button><button data-f="todo">Not done</button><button data-f="weak">Missed</button></div>
+      <button data-f="all">All</button><button data-f="tut">Tutorial</button><button data-f="mid">Exam-style</button><button data-f="todo">Not done</button><button data-f="weak">Missed</button></div>
       <div class="tally"></div></div>`);
   app.append(bar);
   const list = h(`<div></div>`); app.append(list);
@@ -669,7 +691,7 @@ async function viewTopic(n, seq) {
     let lastPart = null;
     shown.forEach(q => {
       if (q.part !== lastPart && (filter === 'all' || filter === 'todo' || filter === 'weak')) {
-        list.append(h(`<h2>${q.part === 'tut' ? 'Part A · Tutorial questions' : 'Part B · Midterm-style questions'}</h2>`)); lastPart = q.part;
+        list.append(h(`<h2>${q.part === 'tut' ? 'Part A · Tutorial questions' : 'Part B · Exam-style questions'}</h2>`)); lastPart = q.part;
       }
       list.append(renderCard(q));
     });
@@ -680,7 +702,7 @@ async function viewTopic(n, seq) {
   draw(); updTally(); onMarks(updTally);
   app.append(h(`<div class="actions" style="justify-content:space-between;margin-top:40px">
     ${prev ? `<a class="btn" href="#/topic/${String(prev.n).padStart(2, '0')}">← Topic ${prev.n}</a>` : '<span></span>'}
-    ${next ? `<a class="btn go" href="#/topic/${String(next.n).padStart(2, '0')}">Topic ${next.n} →</a>` : `<a class="btn go" href="#/mock/1">Mock midterm 1 →</a>`}</div>`));
+    ${next ? `<a class="btn go" href="#/topic/${String(next.n).padStart(2, '0')}">Topic ${next.n} →</a>` : `<a class="btn go" href="#/mock/final-1">Mock final 1 →</a>`}</div>`));
 }
 
 async function viewDrill(kind, seq = routeSeq) {
@@ -688,7 +710,7 @@ async function viewDrill(kind, seq = routeSeq) {
   let list, title, sub;
   if (kind === 'tutorial') {
     list = qs.filter(q => q.part === 'tut').sort((a, b) => tutOrder(a) - tutOrder(b));
-    title = '🎯 Tutorial drill'; sub = 'Every tutorial question in order. Do each on paper first, then check.';
+    title = '🎯 Tutorial drill'; sub = 'Every tutorial and past-final question in order. Do each on paper first, then check.';
   } else if (kind === 'weak') {
     list = qs.filter(q => ['miss', 'part'].includes(markOf(q.key)));
     title = '🔁 Weak spots'; sub = 'Questions you marked missed or partly. Get them to ✓.';
@@ -710,7 +732,7 @@ async function viewDrill(kind, seq = routeSeq) {
 // ---------------------------------------------------------------- mocks
 function mockCard(m, ic) {
   const sc = mockScore(m.file);
-  return h(`<a class="mode" href="#/mock/${m.id}"><span class="ic">${ic}</span><b>${esc(m.title)}</b><small>${esc(m.note.replace(/[()]/g, '') || '50 minutes, 100 marks')}${sc.marked ? ` · last score ${sc.got}/${sc.marked}` : ''}</small></a>`);
+  return h(`<a class="mode" href="#/mock/${m.id}"><span class="ic">${ic}</span><b>${esc(m.title)}</b><small>${esc(m.note.replace(/[()]/g, '') || '2 hours, 100 marks')}${sc.marked ? ` · last score ${sc.got}/${sc.marked}` : ''}</small></a>`);
 }
 function mockScore(file) {
   const s = store.get('mock:' + file, {}); let got = 0, marked = 0;
@@ -738,32 +760,32 @@ let timerHandle = null;
 async function viewMock(id, seq) {
   const m = INDEX.mocks.find(x => x.id === String(id)); if (!m) return notFound();
   const { intro, qs } = parseMock(await load(m.file)); fresh(seq);
-  const base = 'mock/';
+  const base = m.file.replace(/[^/]+$/, '');
   const saved = () => store.get('mock:' + m.file, {});
   const total = qs.reduce((s, q) => s + q.marks, 0) || 100;
   app.innerHTML = '';
   app.append(h(`<div><div class="crumb"><a href="#/">← Home</a></div><h1>${m.wrap ? '🧩' : '📝'} ${esc(m.title)}</h1><p class="sub">${esc(m.note.replace(/[()]/g, ''))}</p></div>`));
   app.append(h(`<div class="intro md">${md(intro, base)}</div>`));
-  const tb = h(`<div class="timer"><span class="clock">50:00</span>
+  const tb = h(`<div class="timer"><span class="clock">120:00</span>
      <button class="btn go" data-a="start">▶ Start</button><button class="btn" data-a="reset">↺</button>
      <span class="score">Score <b>0</b> / ${total}</span></div>`);
   app.append(tb);
   const clock = tb.querySelector('.clock'), startBtn = tb.querySelector('[data-a=start]');
   const tkey = 'timer:' + m.file;
-  const getT = () => store.get(tkey, { left: 50 * 60, running: false, at: 0 });
+  const getT = () => store.get(tkey, { left: 120 * 60, running: false, at: 0 });
   const tick = () => {
     const t = getT(); let left = t.left;
     if (t.running) left = Math.max(0, t.left - (Date.now() - t.at) / 1000);
     const mm = Math.floor(left / 60), ss = Math.floor(left % 60);
     clock.textContent = `${String(mm).padStart(2, '0')}:${String(ss).padStart(2, '0')}`;
     clock.classList.toggle('low', left < 300);
-    startBtn.textContent = t.running ? '❚❚ Pause' : (t.left < 3000 ? '▶ Resume' : '▶ Start');
+    startBtn.textContent = t.running ? '❚❚ Pause' : (t.left < 7200 ? '▶ Resume' : '▶ Start');
     if (t.running && left <= 0) { store.set(tkey, { left: 0, running: false, at: 0 }); clock.textContent = "Time's up"; }
   };
   startBtn.onclick = () => {
     const t = getT();
     if (t.running) store.set(tkey, { left: Math.max(0, t.left - (Date.now() - t.at) / 1000), running: false, at: 0 });
-    else store.set(tkey, { left: t.left || 3000, running: true, at: Date.now() });
+    else store.set(tkey, { left: t.left || 7200, running: true, at: Date.now() });
     tick();
   };
   tb.querySelector('[data-a=reset]').onclick = () => { store.del(tkey); tick(); };
@@ -796,82 +818,6 @@ async function viewMock(id, seq) {
   });
   updScore();
   app.append(h(`<p class="sub" style="margin-top:30px">Mark yourself honestly against the model answers. Each one says which topic and § to go back to.</p>`));
-}
-
-// ---------------------------------------------------------------- 3-day survival plan
-const CE_URL = 'https://comp-eng-lock-in.albinjoby82.workers.dev/';
-const PLAN = [
-  { date: '2026-10-24', day: 'Saturday', title: 'SSD Chapter 1 + CE Weeks 1–2', blocks: [
-    { when: 'Afternoon', items: [['ssd', 1, '15 min'], ['ssd', 2, '45 min'], ['ssd', 3, '40 min']] },
-    { when: 'Evening', items: [['ssd', 4, '40 min'], ['ssd', 5, '60 min'], ['ssd', 6, '30 min'], ['ssd', 7, '20 min']] },
-    { when: 'Night', items: [['ce', 1, '45 min'], ['ce', 2, '45 min']] },
-  ] },
-  { date: '2026-10-25', day: 'Sunday', title: 'SSD Chapter 2 + CE Weeks 3–4', blocks: [
-    { when: 'Morning', items: [['ssd', 8, '30 min'], ['ssd', 9, '40 min'], ['ssd', 10, '45 min']] },
-    { when: 'Afternoon', items: [['ssd', 11, '30 min'], ['ssd', 12, '45 min'], ['ssd', 13, '45 min'], ['ssd', 14, '45 min']] },
-    { when: 'Evening', items: [['ce', 3, '45 min'], ['ce', 4, '50 min']] },
-  ] },
-  { date: '2026-10-26', day: 'Monday', title: 'CE Weeks 5–6 + both mocks', blocks: [
-    { when: 'Morning', items: [['ce', 5, '60 min'], ['ce', 6, '60 min']] },
-    { when: 'Afternoon', items: [['link', 'ce-exam', 'CE exam simulation (12 Qs, 50 min)', CE_URL + '?exam=1', '50 min'], ['link', 'ce-wrong', 'CE: redo every question you got wrong', CE_URL, '40 min']] },
-    { when: 'Evening', items: [['link', 'ssd-mock1', 'SSD Mock Midterm 1 (timed)', '#/mock/1', '50 min'], ['link', 'ssd-weak', 'SSD weak spots: redo ✗ and ~ questions', '#/drill/weak', '40 min'], ['link', 'sleep', 'Sleep. CE test is Tue 11:00.', '', '']] },
-  ] },
-];
-const CE_WEEKS = { 1: 'Intro, types, operators', 2: 'I/O, decisions, switch & while', 3: 'for / do-while, math.h, functions', 4: 'Scope, preprocessor, arrays', 5: '2-D arrays & pointers', 6: 'Strings, typedef & enum, structures' };
-const todayISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
-const planId = it => it[0] === 'link' ? it[1] : it[0] + it[1];
-function planItemInfo(it) {
-  if (it[0] === 'ssd') { const t = INDEX.topics.find(x => x.n === it[1]); return { label: `SSD Topic ${it[1]}: ${t ? t.title.split(/[:(]/)[0].trim() : ''}`, sub: t && t.tutQs ? 'Tutorial ' + t.tutQs : '', href: `#/topic/${String(it[1]).padStart(2, '0')}`, time: it[2], ext: false, topic: t }; }
-  if (it[0] === 'ce') return { label: `CE Week ${it[1]}: ${CE_WEEKS[it[1]]}`, sub: 'week test on your CE site', href: `${CE_URL}?w=${it[1]}`, time: it[2], ext: true };
-  return { label: it[2], sub: '', href: it[3], time: it[4], ext: /^https?:/.test(it[3]) };
-}
-function todayCard() {
-  const day = PLAN.find(d => d.date === todayISO()) || PLAN[0];
-  const items = day.blocks.flatMap(b => b.items), done = items.filter(it => store.get('plan:' + planId(it))).length;
-  const next = items.find(it => !store.get('plan:' + planId(it)));
-  const ni = next && planItemInfo(next);
-  return `<a class="today" href="#/plan"><span class="today-l">📅 ${day.day}: ${esc(day.title)}</span>
-    <span class="today-p"><b>${done} / ${items.length}</b> done</span>
-    ${ni ? `<span class="today-n">Next up → <b>${pretty(ni.label)}</b> <small>${esc(ni.time)}</small></span>` : '<span class="today-n">Day done 🎉</span>'}</a>`;
-}
-async function viewPlan(seq) {
-  const qs = await allQs(); fresh(seq);
-  app.innerHTML = '';
-  app.append(h(`<div class="pagehead"><div class="crumb"><a href="#/">← Home</a></div><h1>📅 3-day survival plan</h1>
-    <p class="sub">SSD + CE (EEEN20010). <b>CE In-Class Test: Tue 27 Oct, 11:00</b>. Tick things off as you go.</p></div>`));
-  app.append(h(`<div class="callout"><b>Survival rules</b><br>
-    For each SSD topic, do the <b>tutorial questions only</b>: try, check, 📖 notes, 🔀 new numbers.<br>
-    Midterm-style questions are a bonus if you're ahead. If you're behind, skip the ●● topics' extras, never the ●●● ones.<br>
-    CE: open the week test, answer, and press <b>Open the slide</b> on anything you get wrong.</div>`));
-  PLAN.forEach(d => {
-    const items = d.blocks.flatMap(b => b.items);
-    const isToday = d.date === todayISO();
-    const sec = h(`<section class="day${isToday ? ' is-today' : ''}"><div class="day-head"><h2>${d.day} <small>${new Date(d.date + 'T12:00').toLocaleDateString('en-IE', { day: 'numeric', month: 'short' })}</small>${isToday ? ' <span class="tag">Today</span>' : ''}</h2><span class="day-t">${esc(d.title)}</span><span class="day-c"></span></div></section>`);
-    const count = () => { const n = items.filter(it => store.get('plan:' + planId(it))).length; sec.querySelector('.day-c').textContent = `${n} / ${items.length}`; };
-    d.blocks.forEach(b => {
-      sec.append(h(`<div class="when">${b.when}</div>`));
-      b.items.forEach(it => {
-        const info = planItemInfo(it), id = planId(it);
-        let prog = '';
-        if (info.topic) {
-          const tq = qs.filter(q => q.topic === info.topic && q.part === 'tut'), tl = tallyOf(tq);
-          prog = `<span class="pprog">${tl.got}/${tl.total} tutorial ✓</span>`;
-        }
-        const row = h(`<div class="pitem${store.get('plan:' + id) ? ' done' : ''}">
-          <button class="tick" aria-label="Mark done">${store.get('plan:' + id) ? '✓' : ''}</button>
-          <div class="pbody">${info.href ? `<a href="${esc(info.href)}"${info.ext ? ' target="_blank" rel="noopener"' : ''}>${pretty(info.label)}${info.ext ? ' ↗' : ''}</a>` : `<span>${pretty(info.label)}</span>`}
-            <small>${[info.sub, info.time].filter(Boolean).map(esc).join(' · ')}</small></div>${prog}</div>`);
-        row.querySelector('.tick').onclick = () => {
-          const v = !store.get('plan:' + id); v ? store.set('plan:' + id, true) : store.del('plan:' + id);
-          row.classList.toggle('done', v); row.querySelector('.tick').textContent = v ? '✓' : ''; count();
-        };
-        sec.append(row);
-      });
-    });
-    count();
-    app.append(sec);
-  });
-  app.append(h(`<p class="sub" style="margin-top:28px">Times are rough. If a topic runs over, steal from the ●● topics, not the ●●● ones.</p>`));
 }
 
 // ---------------------------------------------------------------- repetition: one question at a time, misses come back
@@ -1012,7 +958,6 @@ async function route() {
     else if (view === 'topic') await viewTopic(arg, seq);
     else if (view === 'drill') await viewDrill(arg, seq);
     else if (view === 'mock') await viewMock(arg, seq);
-    else if (view === 'plan') await viewPlan(seq);
     else if (view === 'repeat') await viewRepeat(seq);
     else notFound();
   } catch (e) {
