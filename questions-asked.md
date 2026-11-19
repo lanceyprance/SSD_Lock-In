@@ -1,4 +1,4 @@
-# Questions Albin asked (per topic)
+# Questions asked (per topic)
 
 The bits that confused me, with the short answer. Re-read this before the exam.
 
@@ -440,3 +440,37 @@ Show your method and either route gets marks.
 📍 [Notes 10](notes/10-pn-zero-bias.md)
 
 ---
+
+---
+
+## Topic 15 — MOS capacitor
+
+(none yet)
+
+## Topic 16 — MOS C–V
+
+(none yet)
+
+## Topic 17 — MOSFET current
+
+(none yet)
+
+## Topic 18 — MOSFET types
+
+(none yet)
+
+## Topic 19 — MOSFET small signal
+
+(none yet)
+
+## Topic 20 — BJT operation
+
+(none yet)
+
+## Topic 21 — BJT currents
+
+(none yet)
+
+## Topic 22 — BJT small signal
+
+(none yet)
