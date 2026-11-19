@@ -1,6 +1,6 @@
 # Topic 8 — Bringing two materials into contact
 
-Tutorial questions: Ch2 Q2, Q3, Q4
+Tutorial questions: Ch2 Q2, Q3, Q4 · Past finals: none directly (used in 9 and 15)
 
 Slides: SSD_2, pages 3 to 11. Booklet §3.1 (pages 37 to 38).
 
@@ -28,6 +28,22 @@ Three rules for any junction with no voltage applied:
 When you see 🧠, stop.
 Answer it on paper first.
 Then click to check.
+
+---
+
+## 🎯 In the final
+
+Not asked on its own, but the rule "E_F lines up, electrons flow from the higher E_F" is how you draw every contact (Topic 9) and every MOS band diagram (Topic 15).
+
+---
+
+## ⭐ Learn by heart from this topic
+
+Not on the formula sheet.
+
+- In equilibrium **E_F is flat** through everything in contact.
+- Electrons flow from the side with the **higher E_F** (smaller workfunction) to the lower one.
+- E_vac is continuous; the bands bend near the junction, the step equals the workfunction difference.
 
 ---
 

@@ -9,7 +9,7 @@ V_T = 0.026 V. nᵢ² ≈ 2.1 × 10²⁰ cm⁻⁶. e = 1.6 × 10⁻¹⁹ C.
 
 ---
 
-## Part A: Tutorial questions
+## Part A: Tutorial and past-final questions
 
 ### Q12 (Tutorial Ch2 Q12)
 
@@ -51,7 +51,57 @@ From: §6
 
 ---
 
-## Part B: Midterm-style questions
+### F2018-2diii (Final 2018 Q2d iii)
+
+For the 2018 Fig. 2.1 diode, calculate the total current density. D_n = 50, D_p = 20 cm²/s. Take the depletion regions into account. [6]
+
+![Fig. 2.1](../img/papers/2018-fig2-1.png)
+
+<details><summary>Answer</summary>
+
+n side −110 to −10 nm = 100 nm (holes, Δp = 10²); p side 50 to 200 nm = 150 nm (electrons, Δn = 10⁵).
+
+J = e(D_n Δn/X_n + D_p Δp/X_p) = 1.6 × 10⁻¹⁹ (50 × 10⁵/150 × 10⁻⁷ + 20 × 10²/100 × 10⁻⁷) = **5.33 × 10⁻⁸ A/cm²**
+
+From: ⭐ formula, §5
+
+</details>
+
+---
+
+### F2017-1g (Final 2017 Q1g)
+
+A p⁺n junction carries 6.11 × 10⁻¹¹ A/cm² forward. The p and n widths equal the diffusion lengths, L_p = 5 × 10⁻⁴ cm, L_n = 4 × 10⁻⁴ cm. D_p = 2, D_n = 3 cm²/s. Find the excess minority carrier concentration at the n-side depletion edge. State your assumption. [6]
+
+<details><summary>Answer</summary>
+
+**Assume J ≈ J_p** (p⁺n). [3]
+
+Δp = J L_p/(eD_p) = 6.11 × 10⁻¹¹ × 5 × 10⁻⁴ ÷ (1.6 × 10⁻¹⁹ × 2) = **9.5 × 10⁴ cm⁻³** [3]
+
+Mistakes: not using J ≈ J_p; using L_n instead of L_p.
+
+From: ⭐ list, §5
+
+</details>
+
+---
+
+### F2018-1ciii (Final 2018 Q1c iii)
+
+Yes or no: current through the depletion region of a pn diode is mainly determined by drift. [1]
+
+<details><summary>Answer</summary>
+
+**No.** The current is set by carriers **diffusing** across (drift and diffusion nearly cancel in there).
+
+From: ⭐ list
+
+</details>
+
+---
+
+## Part B: Exam-style questions
 
 ---
 

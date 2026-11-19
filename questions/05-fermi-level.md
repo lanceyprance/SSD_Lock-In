@@ -9,7 +9,7 @@ kT = 0.026 eV at 300 K. k = 8.62 × 10⁻⁵ eV/K. N_C = 3.2 × 10¹⁹ cm⁻³.
 
 ---
 
-## Part A: Tutorial questions
+## Part A: Tutorial and past-final questions
 
 ### Q10 (Tutorial Ch1 Q10)
 
@@ -175,7 +175,103 @@ From: §7
 
 ---
 
-## Part B: Midterm-style questions
+### F2014-1bc (Final 2014 Q1b and c)
+
+Si is doped with 10¹⁷ cm⁻³ boron. (b) Find E_F relative to the conduction band. [5] (c) Sketch the band diagram (E_C, E_V, E_F, E_i, E_G). [5]
+
+<details><summary>Answer</summary>
+
+**(b)** E_F − E_V = kT ln(N_V/p) = 0.026 × ln(1.8 × 10¹⁹ ÷ 10¹⁷) = 0.135 eV, so **E_C − E_F = 1.12 − 0.135 = 0.985 eV**. (Or kT ln(N_C N_A/nᵢ²) = 0.969 eV.)
+
+**(c)** p-type: E_F 0.135 eV above E_V, E_i near midgap above E_F.
+
+From: §6, drawing checklist
+
+</details>
+
+---
+
+### F2016-1a (Final 2016 Q1a i and ii)
+
+(i) Sketch the band diagram (E_C, E_V, E_F, E_i, E_G) of n-type Si. [4] (ii) Give E_C, E_V and E_i relative to E_F for N_D = 2 × 10¹⁷ cm⁻³. [6]
+
+<details><summary>Answer</summary>
+
+![Official answer](../img/papers/ans-2016-q1ai.png)
+
+E_C − E_F = kT ln(N_C/N_D) = **0.13 eV**. E_C − E_i = kT ln(N_C/nᵢ) = **0.56 eV**. With E_V = 0: E_C = 1.12, **E_F = 0.99**, **E_i = 0.56 eV**.
+
+![Official answer](../img/papers/ans-2016-q1aii.png)
+
+From: §6, §7
+
+</details>
+
+---
+
+### F2015-1b (Final 2015 Q1b)
+
+(i) What is the probability of finding an electron at E_F? [2] (ii) What is the density of electrons at E = E_F in an n-doped material? Explain. [4]
+
+<details><summary>Answer</summary>
+
+**(i)** f(E_F) = 1/(1 + e⁰) = **½**.
+
+**(ii)** **Zero.** An electron needs an available state, and E_F is in the bandgap, which has none. (Unless degenerate doping puts E_F in the band.)
+
+From: §3
+
+</details>
+
+---
+
+### F2018-2b (Final 2018 Q2b (also 2017 Q1c))
+
+Prove the law of mass action n × p = nᵢ² for a semiconductor in equilibrium. [4]
+
+<details><summary>Answer</summary>
+
+n × p = N_C e^((E_F − E_C)/kT) × N_V e^((E_V − E_F)/kT) = N_C N_V e^(−E_G/kT). The sheet's nᵢ = √(N_C N_V) e^(−E_G/2kT) squared is the same. So **np = nᵢ²**.
+
+From: §5
+
+</details>
+
+---
+
+### F2017-1e (Final 2017 Q1e)
+
+![Fig. 1.1](../img/papers/2017-fig1-1.png)
+
+The black dots are free carriers. (i) Electrons or holes? [2] (ii) Which, A or B, has the higher potential energy? [2]
+
+<details><summary>Answer</summary>
+
+**(i) Holes** (free carriers in the valence band). **(ii) B**: deeper into the valence band = higher hole energy.
+
+From: §2
+
+</details>
+
+---
+
+### F2015-1d (Final 2015 Q1d)
+
+Draw the band diagram (E_C, E_V, E_F, E_i, E_G) of the material with the linearly falling N_D(x) (2015 Fig. 1.1). [6]
+
+<details><summary>Answer</summary>
+
+![Official answer](../img/papers/ans-2015-q1d.png)
+
+n-type throughout (E_F above E_i), **E_F flat** (no bias), E_G constant, E_C moves away from E_F towards the low doping. Major error: a slope in E_F.
+
+From: §6, Topic 4 §7
+
+</details>
+
+---
+
+## Part B: Exam-style questions
 
 ---
 

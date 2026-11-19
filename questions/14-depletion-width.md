@@ -9,7 +9,7 @@ e = 1.6 × 10⁻¹⁹ C. ε₀ = 8.85 × 10⁻¹⁴ F/cm. ε_r = 11.9. V_T = 0.0
 
 ---
 
-## Part A: Tutorial questions
+## Part A: Tutorial and past-final questions
 
 ### Q11 (Tutorial Ch2 Q11)
 
@@ -43,7 +43,65 @@ From: §6
 
 ---
 
-## Part B: Midterm-style questions
+### F2015-1f (Final 2015 Q1f)
+
+An unbiased pn junction has N_A = N_D, V_bi = 0.7 V and a p-side depletion width of 2.06 × 10⁻⁵ cm. Find the maximum absolute field. [6]
+
+<details><summary>Answer</summary>
+
+N_A = N_D → w_p = √(εV_bi/(eN_A)) → N_A = εV_bi/(e w_p²) = **10¹⁶ cm⁻³**.
+
+ℰ(x) = −(eN_A/ε)(x + w_p), maximum at x = 0: |ℰ| = eN_A w_p/ε = **3.4 × 10⁴ V/cm**. (Shortcut: V_bi/w_p.)
+
+Common problems: ε = ε₀ε_r, and mixing cm and m.
+
+From: ⭐ list, §3
+
+</details>
+
+---
+
+### F2014-2a (Final 2014 Q2a)
+
+pn diode N_A = 10¹⁶, N_D = 10¹⁹ cm⁻³, unbiased.
+
+![Fig. 2.1](../img/papers/2014-fig2-1.png)
+
+(i) Where is |ℰ| maximum? [2] (ii) Write ρ(x) in the p-side depletion region. [2] (iii) Derive ℰ(x) there from Poisson, without w_n or w_p in the answer. [6]
+
+<details><summary>Answer</summary>
+
+(i) **x = 0.** (ii) **ρ = −eN_A.**
+
+(iii) dℰ/dx = −eN_A/ε → ℰ = −(eN_A/ε)(x + w_p) (using ℰ(−w_p) = 0). N_D ≫ N_A → w_p = √(2εV_bi/(eN_A)):
+
+$$\mathcal{E}(x) = -\frac{eN_A}{\varepsilon}\left(x + \sqrt{\frac{2\varepsilon V_{bi}}{eN_A}}\right)$$
+
+Mistakes: integrating to a number instead of a function; forgetting V = 0.
+
+From: §3, §4
+
+</details>
+
+---
+
+### F2014-1eii (Final 2014 Q1e ii)
+
+For the 2014 diode with N_D > N_A, sketch the cross section with the depletion width in each region, with the right relative sizes. [4]
+
+<details><summary>Answer</summary>
+
+![Official answer](../img/papers/ans-2014-q1eii.png)
+
+N_D > N_A → **w_n < w_p** (N_A w_p = N_D w_n). True for any bias.
+
+From: ⭐ list
+
+</details>
+
+---
+
+## Part B: Exam-style questions
 
 ---
 

@@ -9,7 +9,7 @@ e = 1.6 × 10⁻¹⁹ C. nᵢ = 1.45 × 10¹⁰ cm⁻³.
 
 ---
 
-## Part A: Tutorial questions
+## Part A: Tutorial and past-final questions
 
 ### Q6 (Tutorial Ch1 Q6)
 
@@ -122,7 +122,41 @@ From: §4, §6, §7, and the method at the end of the notes
 
 ---
 
-## Part B: Midterm-style questions
+### F2014-1d (Final 2014 Q1d)
+
+Si doped with 10¹⁷ cm⁻³ boron. µ_e = 300, µ_h = 200 cm²/Vs. Find the resistance of the block (current along y = 100 µm; cross section x = 0.5 mm by z = 2000 nm). [5]
+
+![Fig. 1.1](../img/papers/2014-fig1-1.png)
+
+<details><summary>Answer</summary>
+
+p-type, so σ ≈ e p µ_p (know by heart).
+
+R = y/(σ x z) = 10⁻² ÷ (1.6 × 10⁻¹⁹ × 10¹⁷ × 200 × 0.05 × 2 × 10⁻⁴) = **312.5 Ω**
+
+"All about conversions of units."
+
+From: §6
+
+</details>
+
+---
+
+### F2016-3a (Final 2016 Q3a)
+
+Why is the electron mobility higher than the hole mobility in Si? Use at most 30 words. [4]
+
+<details><summary>Answer</summary>
+
+Mobility is inversely proportional to the carrier mass. Electrons in Si have a lower mass than holes, so their mobility is higher.
+
+From: §2, Topic 1
+
+</details>
+
+---
+
+## Part B: Exam-style questions
 
 ---
 

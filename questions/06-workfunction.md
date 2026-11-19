@@ -9,7 +9,7 @@ Each answer says which notes section (§) it comes from.
 
 ---
 
-## Part A: Tutorial questions
+## Part A: Tutorial and past-final questions
 
 ### Q16 (Tutorial Ch1 Q16)
 
@@ -64,7 +64,27 @@ From: §3 (the worked example)
 
 ---
 
-## Part B: Midterm-style questions
+### F2017-1f (Final 2017 Q1f)
+
+The workfunction of Si is 5.035 V. Determine the doping type and the doping concentration. [6]
+
+<details><summary>Answer</summary>
+
+![Official answer](../img/papers/ans-2017-q1f.png)
+
+E_i is χ + E_G/2 = 4.61 eV below E_vac. 5.035 > 4.61: E_F below E_i → **p-type**.
+
+E_F − E_V = 4.05 + 1.12 − 5.035 = 0.135 eV → p = N_V e^(−0.135/0.026) ≈ **1.0 × 10¹⁷ cm⁻³** (or 1.8 × 10¹⁷ via nᵢ; both accepted).
+
+Common sign error: taking E_V − E_F as positive.
+
+From: ⭐ list
+
+</details>
+
+---
+
+## Part B: Exam-style questions
 
 ---
 

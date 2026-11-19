@@ -7,7 +7,7 @@ Each answer says which notes section (§) it comes from.
 
 ---
 
-## Part A: Tutorial questions
+## Part A: Tutorial and past-final questions
 
 ### Q6 (Tutorial Ch2 Q6)
 
@@ -45,7 +45,49 @@ From: §4, §5, §6
 
 ---
 
-## Part B: Midterm-style questions
+### F2018-1b (Final 2018 Q1b)
+
+(i) Relationship between φ_m and φ_pSi for a Schottky contact. [2] (ii) N_A = 10¹⁶ cm⁻³, φ_B = |E_F − E_vs| = 0.395 eV: give |φ_pSi − φ_m|. [4] (iii) Compare V_ON of this Schottky diode with an n⁺p diode with N_D 100× larger. [4]
+
+<details><summary>Answer</summary>
+
+(i) **φ_m < φ_pSi.**
+
+(ii) ![Official answer](../img/papers/ans-2018-q1b.png)
+
+φ_p = E_F − E_V = 0.026 ln(1.8 × 10¹⁹/10¹⁶) = 0.195 eV → |φ_pSi − φ_m| = 0.395 − 0.195 = **0.2 eV**.
+
+(iii) V_bi(n⁺p) = 0.026 ln(10¹⁶ × 10¹⁸/nᵢ²) = **0.82 V** vs 0.2 V for the Schottky: **V_ON(Schottky) < V_ON(pn)**.
+
+From: ⭐ table, Topic 10
+
+</details>
+
+---
+
+### F2015-1e (Final 2015 Q1e)
+
+Choose a metal from Table 1.1 that gives an ohmic contact on p-Si with N_A = 3.6 × 10¹⁸ cm⁻³. χ = 4.05 eV. Prove your answer. [10]
+
+![Table 1.1](../img/papers/2015-table1-1.png)
+
+<details><summary>Answer</summary>
+
+![Official answer](../img/papers/ans-2015-q1e.png)
+
+Ohmic on p-type = hole accumulation → **φ_m > φ_s**.
+
+E_V − E_F = 0.026 ln(3.6 × 10¹⁸ / 1.8 × 10¹⁹) = −0.042 eV → E_C − E_F = 1.078 eV → φ_s = 4.05 + 1.078 = **5.13 eV**.
+
+**No metal in the table works** (all < 5.13 eV). W, the closest, was accepted with a critical argument.
+
+From: ⭐ table
+
+</details>
+
+---
+
+## Part B: Exam-style questions
 
 ---
 

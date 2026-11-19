@@ -74,7 +74,7 @@ function fixLinks(html, baseDir) {
     if (file === 'formula-sheet.md' || file === 'periodic-table.md') { a.setAttribute('href', '#'); a.dataset.doc = file; return; }
     const q = file.match(/^questions\/(\d\d)-/); if (q) { a.setAttribute('href', '#/topic/' + q[1]); return; }
     const nt = file.match(/^notes\/(\d\d)-/); if (nt) { a.setAttribute('href', '#'); a.dataset.notes = String(+nt[1]); return; }
-    const mk = file.match(/^mock\/midterm-(\d+)\.md$/); if (mk) { a.setAttribute('href', '#/mock/' + mk[1]); return; }
+    const mk = file.match(/^(?:mock|papers)\/([a-z0-9-]+)\.md$/); if (mk) { a.setAttribute('href', '#/mock/' + mk[1]); return; }
     a.setAttribute('href', REPO_BLOB + file + (hash ? '#' + hash : '')); a.target = '_blank'; a.rel = 'noopener';
   });
   prettyScripts(t.content);

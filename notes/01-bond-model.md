@@ -1,6 +1,6 @@
 # Topic 1 — Bond model: electrons and holes
 
-Tutorial questions: Ch1 Q1, Q2, Q3
+Tutorial questions: Ch1 Q1, Q2, Q3 · Past finals: 2017 Q1a, b, e · 2014 Q1a · 2018 Q1c i, ii
 
 Slides: SSD_1, pages 21 to 53
 
@@ -20,6 +20,24 @@ Doping adds extra electrons or extra holes on purpose.
 When you see 🧠, stop.
 Answer it on paper first.
 Then click to check.
+
+---
+
+## 🎯 In the final
+
+Short Q1 parts, 2 marks each: "which statements describe a hole", "why do electrons drift faster", "what is n and p in pure Si", and yes/no checks. Easy marks if the definitions are exact.
+
+---
+
+## ⭐ Learn by heart from this topic
+
+Not on the formula sheet.
+
+- Pure Si: **n = p = nᵢ = 1.45 × 10¹⁰ cm⁻³**.
+- A **hole** is a positive **mobile** charge. Not a void, not an ion, not a positron or proton.
+- At room temperature the valence band is almost completely filled with bonding electrons.
+- Mobility ∝ 1/mass. Electrons are lighter than holes, so **µ_n > µ_p** and electrons drift faster.
+- Heating Si breaks bonds → more carriers → lower resistance (a metal's R goes up).
 
 ---
 

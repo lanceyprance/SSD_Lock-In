@@ -9,7 +9,7 @@ V_T = 0.026 V. nᵢ² ≈ 2.1 × 10²⁰ cm⁻⁶. e = 1.6 × 10⁻¹⁹ C. e^(0
 
 ---
 
-## Part A: Tutorial questions
+## Part A: Tutorial and past-final questions
 
 ### Q9 (Tutorial Ch2 Q9)
 
@@ -59,7 +59,41 @@ From: §7, Equation 20
 
 ---
 
-## Part B: Midterm-style questions
+### F2018-2d (Final 2018 Q2d i and ii)
+
+![Fig. 2.1](../img/papers/2018-fig2-1.png)
+
+(i) Forward or reverse bias? [2] (ii) Which region has the highest majority carrier concentration? Give two features of the plot that show it. [4]
+
+<details><summary>Answer</summary>
+
+(i) **Forward** (positive excess: injection).
+
+(ii) The **n-region**: its depletion region is **smaller**, and its minority carrier concentration is **lower** (mass action → more majority carriers).
+
+From: ⭐ list, Topic 14
+
+</details>
+
+---
+
+### F2014-1eiii (Final 2014 Q1e iii)
+
+For the 2014 diode (N_D > N_A), add the minority carrier concentration to the cross section with the depletion widths. Relative sizes must be right; label the axes. [5]
+
+<details><summary>Answer</summary>
+
+![Official answer](../img/papers/ans-2014-q1eiii.png)
+
+p_n0 = nᵢ²/N_D < n_p0 = nᵢ²/N_A: fewer minority carriers on the heavily doped n side. Any bias accepted; it's about relative sizes.
+
+From: ⭐ list
+
+</details>
+
+---
+
+## Part B: Exam-style questions
 
 ---
 

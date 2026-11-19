@@ -1,6 +1,6 @@
 # Topic 4 — Diffusion current and the built-in field
 
-Tutorial questions: Ch1 Q8, Q9
+Tutorial questions: Ch1 Q8, Q9 · Past finals: 2017 Q1d · 2015 Q1c · 2014 Q2b
 
 Slides: SSD_1, pages 96 to 122
 
@@ -22,6 +22,12 @@ It needs no voltage at all. It only needs a **difference in concentration**.
 When you see 🧠, stop.
 Answer it on paper first.
 Then click to check.
+
+---
+
+## 🎯 In the final
+
+Explain the minus sign in the diffusion current with a sketch (2017 Q1d), the direction of the built-in field from uneven doping (2015 Q1c), and derive that field (2014 Q2b). Don't start from the drift-diffusion equation to explain the sign: it's circular.
 
 ---
 

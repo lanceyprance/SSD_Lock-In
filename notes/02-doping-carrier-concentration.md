@@ -1,6 +1,6 @@
 # Topic 2 — Doping: finding n and p
 
-Tutorial questions: Ch1 Q4, Q5
+Tutorial questions: Ch1 Q4, Q5 · Past finals: 2018 Q2a, c · 2017 Q1h · 2015 Q1a · 2014 Q2c
 
 Slides: SSD_1, pages 54 to 75
 
@@ -23,6 +23,27 @@ Both are ⭐ learn by heart. They are NOT on the formula sheet.
 When you see 🧠, stop.
 Answer it on paper first.
 Then click to check.
+
+---
+
+## 🎯 In the final
+
+Every final. Charge neutrality written out and defined (2018 Q2a), **compensation doping** with the quadratic (2017 Q1h for 8 marks, 2018 Q2c for 10), and the proof that p ≈ N_A (2014 Q2c for 10). The examiners take marks off if you jump to n = N_D − N_A without saying why.
+
+---
+
+## ⭐ Learn by heart from this topic
+
+Not on the formula sheet.
+
+$$p + N_D^+ = n + N_A^- \qquad n \times p = n_i^2$$
+
+- n-type: n ≈ N_D, p = nᵢ²/N_D. p-type: p ≈ N_A, n = nᵢ²/N_A.
+- **Compensation** (both dopants): put p = nᵢ²/n into charge neutrality, solve the quadratic:
+
+$$n = \frac{(N_D - N_A) + \sqrt{(N_D - N_A)^2 + 4n_i^2}}{2}$$
+
+- You can't have more free carriers than the **net** doping.
 
 ---
 

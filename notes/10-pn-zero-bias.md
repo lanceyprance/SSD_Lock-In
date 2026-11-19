@@ -1,6 +1,6 @@
 # Topic 10 — The pn diode at zero bias: built-in voltage V₀ and the depletion region
 
-Tutorial questions: Ch2 Q5, Q11a
+Tutorial questions: Ch2 Q5, Q11a · Past finals: 2018 Q1b iii
 
 Slides: SSD_2, pages 6 to 24. Booklet §3.2.2 (page 42).
 
@@ -25,6 +25,22 @@ This is on the formula sheet as V_bi.
 When you see 🧠, stop.
 Answer it on paper first.
 Then click to check.
+
+---
+
+## 🎯 In the final
+
+V_bi from the formula sheet, usually inside a bigger question (2018 Q1b iii, 2016 Q2d, 2015 Q1f).
+
+---
+
+## ⭐ Learn by heart from this topic
+
+Not on the formula sheet.
+
+- V_bi (on the sheet) = the gap between the two E_F positions before contact.
+- The depletion region holds **fixed ions only** (depletion approximation).
+- At equilibrium |drift| = |diffusion| for each carrier: zero net current.
 
 ---
 

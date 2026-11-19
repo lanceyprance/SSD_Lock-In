@@ -7,7 +7,7 @@ Each answer says which notes section (§) it comes from.
 
 ---
 
-## Part A: Tutorial questions
+## Part A: Tutorial and past-final questions
 
 ### Q2 (Tutorial Ch2 Q2)
 
@@ -62,7 +62,7 @@ From: §5, drawing checklist
 
 ---
 
-## Part B: Midterm-style questions
+## Part B: Exam-style questions
 
 ---
 

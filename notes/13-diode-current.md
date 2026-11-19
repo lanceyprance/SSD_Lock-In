@@ -1,6 +1,6 @@
 # Topic 13 — Diode current (short diode) and the I–V curve
 
-Tutorial questions: Ch2 Q12, Q13
+Tutorial questions: Ch2 Q12, Q13 · Past finals: 2018 Q2d iii · 2017 Q1g · 2018 Q1c iii
 
 Slides: SSD_2, pages 66 to 73. Booklet §3.2.4 and summary (pages 53, 56).
 
@@ -24,6 +24,24 @@ $$I = I_0\left(e^{V/V_T} - 1\right)$$
 When you see 🧠, stop.
 Answer it on paper first.
 Then click to check.
+
+---
+
+## 🎯 In the final
+
+Short-diode current from a carrier plot (2018 Q2d iii) or backwards to the excess carriers (2017 Q1g). Use the **lengths** of short layers; for a p⁺n assume J ≈ J_p.
+
+---
+
+## ⭐ Learn by heart from this topic
+
+Not on the formula sheet.
+
+$$J = e\left(D_n\frac{\Delta n_p}{W_p} + D_p\frac{\Delta p_n}{W_n}\right) \quad \text{(short layers: real lengths)}$$
+
+- Long layers: use the diffusion lengths L_n, L_p (formula sheet).
+- The current is dominated by injection into the **lightly doped** side. For p⁺n: J ≈ J_p.
+- Minority carriers move by **diffusion**; their drift is tiny.
 
 ---
 

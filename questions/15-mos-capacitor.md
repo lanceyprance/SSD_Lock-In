@@ -43,7 +43,7 @@ From: §2, §3, §4, §6
 
 ---
 
-### Q2 (Final 2016 Q1d i)
+### F2016-1di (Final 2016 Q1d i)
 
 Sketch the band diagram (E_C, E_i, E_F) of an **n-channel enhancement mode MOSFET** from the gate, through the oxide, into the substrate, in the middle of the channel, at V_GS = V_th and V_DS = 0 V. Show V_GS on the sketch. [6]
 
@@ -62,7 +62,7 @@ From: §4, §5
 
 ---
 
-### Q3 (Final 2016 Q3b)
+### F2016-3b (Final 2016 Q3b)
 
 A MOSFET has n⁺ source and drain on p-Si. The gate and substrate workfunctions satisfy φ_G − φ_p = 1 V. All contacts are at zero bias.
 
@@ -85,7 +85,7 @@ From: §1
 
 ---
 
-### Q4 (Final 2014 Q3b ii)
+### F2014-3bii (Final 2014 Q3b ii)
 
 A pMOS is built on n-type Si. At V_GS = 0 V the flat band condition is found (no band bending between gate and substrate). The workfunction of the metal is φ_m = 4.259 eV and E_vac − E_C = 4.050 eV.
 

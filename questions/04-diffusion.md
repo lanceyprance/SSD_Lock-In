@@ -9,7 +9,7 @@ e = 1.6 × 10⁻¹⁹ C. kT/e = 0.026 V. nᵢ = 1.45 × 10¹⁰ cm⁻³.
 
 ---
 
-## Part A: Tutorial questions
+## Part A: Tutorial and past-final questions
 
 ### Q8 (Tutorial Ch1 Q8)
 
@@ -133,7 +133,65 @@ From: §7
 
 ---
 
-## Part B: Midterm-style questions
+### F2017-1d (Final 2017 Q1d)
+
+The hole diffusion current is I_p = −eD_pA dp/dx. Explain, using graphs, the reason for the "−" sign. [4]
+
+<details><summary>Answer</summary>
+
+![Official answer](../img/papers/ans-2017-q1d.png)
+
+Holes flow from high to low concentration: **+x**. Holes are positive, so the current is also **+x**. But dp/dx < 0 (negative gradient), so it must be multiplied by −1.
+
+Starting from the drift-diffusion equation is circular (the sign is already in it).
+
+From: §2
+
+</details>
+
+---
+
+### F2015-1c (Final 2015 Q1c)
+
+The doping density N_D(x) falls linearly from N₁ at x = 0 to N₂ at x = L. Give the direction of the electric field with no bias. Explain briefly. [4]
+
+![Fig. 1.1](../img/papers/2015-fig1-1.png)
+
+<details><summary>Answer</summary>
+
+![Official answer](../img/papers/ans-2015-q1c.png)
+
+Electrons **diffuse** from x = 0 to x = L. No bias = no net current, so a field must make them **drift** back. ℰ points from + to −: **+x**, towards the low doping.
+
+From: §7
+
+</details>
+
+---
+
+### F2014-2b (Final 2014 Q2b)
+
+The n region doping varies slowly: N(x) = 10¹⁷ − 5 × 10¹⁸x. (i) Sketch n and p with no bias. [4] (ii) Derive the internal field as a function of constants and x only. [4] (iii) Draw its direction. [2]
+
+<details><summary>Answer</summary>
+
+**(i)**
+
+![Official answer](../img/papers/ans-2014-q2bi.png)
+
+n(x) linear down to 0 at x = 0.02 cm. p = nᵢ²/n is **non-linear** (2100 cm⁻³ at 0, 4.2 × 10⁴ at 0.019 cm).
+
+**(ii)** J_n = 0 → ℰ = −(kT/e)(1/n)(dn/dx) = 0.026 × 5 × 10¹⁸ ÷ (10¹⁷ − 5 × 10¹⁸x) = **13 ÷ (10 − 500x) V/cm**. Charge neutral region: don't use Poisson.
+
+**(iii)** **+x**, so drift opposes diffusion.
+
+From: §7
+
+</details>
+
+---
+
+## Part B: Exam-style questions
 
 ---
 

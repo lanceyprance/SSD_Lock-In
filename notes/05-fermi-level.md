@@ -1,6 +1,6 @@
 # Topic 5 — Energy bands and the Fermi level
 
-Tutorial questions: Ch1 Q10, Q11, Q12, Q13, Q14, Q15
+Tutorial questions: Ch1 Q10, Q11, Q12, Q13, Q14, Q15 · Past finals: 2018 Q2b · 2017 Q1c, e · 2016 Q1a i, ii · 2015 Q1b, d · 2014 Q1b, c
 
 Slides: SSD_1, pages 136 to 169
 
@@ -24,6 +24,12 @@ From where E_F sits, you can **calculate n and p**.
 When you see 🧠, stop.
 Answer it on paper first.
 Then click to check.
+
+---
+
+## 🎯 In the final
+
+In almost every Q1: E_F from the doping and the band diagram (2014 Q1b c, 2016 Q1a), f(E_F) = ½ and "no electrons at E_F" (2015 Q1b), and **prove np = nᵢ²** (2017 Q1c, 2018 Q2b).
 
 ---
 

@@ -1,6 +1,6 @@
 # Topic 12 — Minority carrier injection and concentration profiles
 
-Tutorial questions: Ch2 Q9, Q10
+Tutorial questions: Ch2 Q9, Q10 · Past finals: 2018 Q2d i, ii · 2014 Q1e iii
 
 Slides: SSD_2, pages 49 to 65. Booklet §3.2.4 (pages 49 to 53).
 
@@ -24,6 +24,24 @@ Everything in Topics 12 and 13 comes from this triangle.
 When you see 🧠, stop.
 Answer it on paper first.
 Then click to check.
+
+---
+
+## 🎯 In the final
+
+Read an excess-carrier plot: forward or reverse, which side is more heavily doped (2018 Q2d). Minority carrier sketches with the right relative sizes (2014 Q1e iii). This is also step 1 of every BJT question.
+
+---
+
+## ⭐ Learn by heart from this topic
+
+Not on the formula sheet.
+
+$$c = c_0\,e^{eV/kT} \qquad c_0 = \frac{n_i^2}{N}$$
+
+- Applies at the **depletion edges**. Ohmic contacts hold c₀.
+- The **lightly doped** side gets the most minority carriers (biggest c₀).
+- Excess = c − c₀: positive under forward bias, slightly negative under reverse.
 
 ---
 

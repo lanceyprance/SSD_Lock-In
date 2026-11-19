@@ -9,7 +9,7 @@ nᵢ = 1.45 × 10¹⁰ cm⁻³ and nᵢ² ≈ 2.1 × 10²⁰ cm⁻⁶ (Si, 300 K
 
 ---
 
-## Part A: Tutorial questions
+## Part A: Tutorial and past-final questions
 
 ### Q4 (Tutorial Ch1 Q4)
 
@@ -103,7 +103,89 @@ These match the official answers.
 
 ---
 
-## Part B: Midterm-style questions
+### F2018-2a (Final 2018 Q2a)
+
+Give the general charge neutrality expression for a semiconductor. Define all parameters. [4]
+
+<details><summary>Answer</summary>
+
+**p − n + N_D − N_A = 0**
+
+p: free hole concentration. n: free electron concentration. N_D: ionised donor atoms. N_A: ionised acceptor atoms.
+
+From: §2, Equation 3
+
+</details>
+
+---
+
+### F2018-2c (Final 2018 Q2c)
+
+A p-type Si substrate is doped with 10¹⁷ cm⁻³ boron. Arsenic is implanted to give a final homogeneous doping of 10¹⁸ cm⁻³. Calculate the exact electron and hole densities in both the substrate and the implanted region. [10]
+
+<details><summary>Answer</summary>
+
+**Implanted region (compensated):** −n² + (N_D − N_A)n + nᵢ² = 0 → n = [(9 × 10¹⁷) + √((9 × 10¹⁷)² + 4nᵢ²)]/2 = **9 × 10¹⁷ cm⁻³** [4]; p = nᵢ²/n = **2.34 × 10² cm⁻³** [2]
+
+**Substrate:** p = N_A = **10¹⁷ cm⁻³** [2]; n = nᵢ²/p = **2.1 × 10³ cm⁻³** [2]
+
+Just n = N_D − N_A with no working or reason: 1 mark.
+
+From: §7
+
+</details>
+
+---
+
+### F2017-1h (Final 2017 Q1h)
+
+A Si substrate with acceptor doping 10¹⁷ cm⁻³ is implanted with a donor doping of 10¹⁸ cm⁻³. Calculate the hole and electron concentrations in the implanted region. [8]
+
+<details><summary>Answer</summary>
+
+Compensation doping. Charge neutrality and mass action [4] → n² − (N_D − N_A)n − nᵢ² = 0 → **n = 9 × 10¹⁷ cm⁻³**, **p ≈ 234 cm⁻³** [4].
+
+n = 1.1 × 10¹⁸ is wrong: more electrons than the net doping is impossible.
+
+From: §7
+
+</details>
+
+---
+
+### F2014-2c (Final 2014 Q2c)
+
+Using charge neutrality in a homogeneously doped p region and the law of mass action, show that p ≈ N_A if N_A ≫ nᵢ. [10]
+
+<details><summary>Answer</summary>
+
+ρ = e(p − n − N_A) [2], neutral so p − n − N_A = 0 [1]. Mass action n = nᵢ²/p [2].
+
+p² − N_A p − nᵢ² = 0 → p = [N_A + √(N_A² + 4nᵢ²)]/2 [5]. For N_A ≫ nᵢ the root ≈ N_A, so **p ≈ N_A**.
+
+Don't start from n = nᵢ²/N_A: that's what you're proving. N_D = 0 here.
+
+From: §5, §2
+
+</details>
+
+---
+
+### F2015-1a (Final 2015 Q1a)
+
+Give expressions for the majority and minority carrier density as a function of donor doping N_D. [4]
+
+<details><summary>Answer</summary>
+
+**n_n = N_D, p_n = nᵢ²/N_D.**
+
+From: §3, Equation 4
+
+</details>
+
+---
+
+## Part B: Exam-style questions
 
 ---
 

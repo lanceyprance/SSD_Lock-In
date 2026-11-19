@@ -1,6 +1,6 @@
 # Topic 3 — Drift: mobility, conductivity, resistance
 
-Tutorial questions: Ch1 Q6, Q7
+Tutorial questions: Ch1 Q6, Q7 · Past finals: 2014 Q1d · 2016 Q3a
 
 Slides: SSD_1, pages 76 to 95
 
@@ -26,6 +26,12 @@ How much current you get depends on:
 When you see 🧠, stop.
 Answer it on paper first.
 Then click to check.
+
+---
+
+## 🎯 In the final
+
+Rare but quick: a resistance with a units trap (2014 Q1d) and "why is the electron mobility higher" (2016 Q3a, 30 words).
 
 ---
 

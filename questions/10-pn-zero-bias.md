@@ -9,7 +9,7 @@ kT/e = 0.026 V. nᵢ² ≈ 2.1 × 10²⁰ cm⁻⁶. N_C = 3.2 × 10¹⁹. N_V = 
 
 ---
 
-## Part A: Tutorial questions
+## Part A: Tutorial and past-final questions
 
 ### Q5 (Tutorial Ch2 Q5)
 
@@ -52,7 +52,21 @@ From: §3, Equation 18
 
 ---
 
-## Part B: Midterm-style questions
+### F2018-1biii (Final 2018 Q1b iii)
+
+Compare the on-voltage of a Schottky diode with a 0.2 eV barrier and an n⁺p diode with N_A = 10¹⁶ and N_D = 10¹⁸ cm⁻³. Justify. [4]
+
+<details><summary>Answer</summary>
+
+V_bi = 0.026 × ln(10¹⁶ × 10¹⁸ ÷ (1.45 × 10¹⁰)²) = **0.82 V** ≫ 0.2 V. A smaller barrier needs less forward voltage, so **V_ON(Schottky) < V_ON(pn)**.
+
+From: §3, Equation 18
+
+</details>
+
+---
+
+## Part B: Exam-style questions
 
 ---
 

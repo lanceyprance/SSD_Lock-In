@@ -7,7 +7,7 @@ Each answer says which notes section (§) it comes from.
 
 ---
 
-## Part A: Tutorial questions
+## Part A: Tutorial and past-final questions
 
 ### Q7 (Tutorial Ch2 Q7)
 
@@ -43,7 +43,61 @@ From: §7
 
 ---
 
-## Part B: Midterm-style questions
+### F2016-1b (Final 2016 Q1b)
+
+![Fig. 1.2](../img/papers/2016-fig1-2.png)
+
+(i) Sketch E_C, E_V, E_F of the diode when N_A = 2N_D, consistent with the doping. [6] (ii) Fill in (forward, reverse, diffuse, drift, left-to-right, right-to-left, 1, 2, 4, larger, smaller): the diode is ___ biased; electrons ___ from ___ across the depletion region; holes ___ from ___ across the n-type region; the depletion width in the n region is ___ × ___ than in the p region. [4]
+
+<details><summary>Answer</summary>
+
+**(i)**
+
+![Official answer](../img/papers/ans-2016-q1bi.png)
+
+[2] flat in the neutral regions, [3] correct E_F positions and ΔE_F, [1] non-linear in the depletion region.
+
+**(ii)** **FORWARD**; electrons **DIFFUSE** from **RIGHT TO LEFT**; holes **DIFFUSE** from **LEFT TO RIGHT**; n-side depletion **2 × LARGER**.
+
+From: §2, Topic 14
+
+</details>
+
+---
+
+### F2014-1ei (Final 2014 Q1e i)
+
+![Fig. 1.2](../img/papers/2014-fig1-2.png)
+
+Sketch the I–V characteristic of this diode for 0 < |V| < 1 V. [4]
+
+<details><summary>Answer</summary>
+
+![Official answer](../img/papers/ans-2014-q1ei.png)
+
+The battery's + is on the **n** side, so V > 0 is **reverse** bias: current flows for V < 0. "Most graphs were flipped around the I axis."
+
+From: §1
+
+</details>
+
+---
+
+### F2018-1civ (Final 2018 Q1c iv)
+
+Yes or no: the reverse bias current of a pn diode is limited by the electric field across the diode. [1]
+
+<details><summary>Answer</summary>
+
+**No.** It is limited by the **supply of minority carriers** near the junction.
+
+From: ⭐ list
+
+</details>
+
+---
+
+## Part B: Exam-style questions
 
 ---
 

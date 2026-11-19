@@ -1,6 +1,6 @@
 # Topic 14 — Depletion width, charge and electric field (Poisson)
 
-Tutorial questions: Ch2 Q11 b–e
+Tutorial questions: Ch2 Q11 b–e · Past finals: 2015 Q1f · 2014 Q2a · 2014 Q1e ii
 
 Slides: SSD_2, pages 74 to 87. Booklet §3.2.3 (pages 44 to 48).
 
@@ -25,6 +25,23 @@ Three facts give you everything:
 When you see 🧠, stop.
 Answer it on paper first.
 Then click to check.
+
+---
+
+## 🎯 In the final
+
+Maximum field at the junction (2014 Q2a i, 2015 Q1f), derive ℰ(x) from Poisson (2014 Q2a iii), and relative depletion widths in a sketch (2014 Q1e ii, 2016 Q1b ii4).
+
+---
+
+## ⭐ Learn by heart from this topic
+
+Not on the formula sheet.
+
+- |ℰ| is **maximum at the junction** (x = 0) and zero at the depletion edges.
+- |ℰ_max| = eN_A w_p/ε = eN_D w_n/ε. One-sided junction: |ℰ_max| ≈ 2V/W.
+- N_A w_p = N_D w_n: the depletion region sits mostly in the **lightly doped** side.
+- ε = ε₀ε_Si = 11 × 8.85 × 10⁻¹⁴ F/cm. Don't mix cm and m.
 
 ---
 

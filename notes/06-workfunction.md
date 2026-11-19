@@ -1,6 +1,6 @@
 # Topic 6 — Vacuum level, electron affinity χ, workfunction φ
 
-Tutorial questions: Ch1 Q16, Ch2 Q1
+Tutorial questions: Ch1 Q16, Ch2 Q1 · Past finals: 2017 Q1f
 
 Slides: SSD_1, pages 170 to 176. Booklet §3.1 (page 37).
 
@@ -25,6 +25,24 @@ Two distances from E_vac matter:
 When you see 🧠, stop.
 Answer it on paper first.
 Then click to check.
+
+---
+
+## 🎯 In the final
+
+Workfunction → doping type and density (2017 Q1f, 6 marks). The same skill sits inside every contact question (Topics 9, 15).
+
+---
+
+## ⭐ Learn by heart from this topic
+
+Not on the formula sheet.
+
+$$e\phi_s = e\chi + (E_C - E_F) \qquad \chi_{Si} = 4.05 \text{ eV}$$
+
+- E_i sits about χ + E_G/2 = **4.61 eV** below E_vac.
+- φ > 4.61 eV → E_F below E_i → **p-type**. φ < 4.61 eV → **n-type**.
+- The workfunction is a **material** property: it does not change on contact.
 
 ---
 

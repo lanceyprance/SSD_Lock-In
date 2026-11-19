@@ -1,6 +1,6 @@
 # Topic 11 — The pn diode under forward and reverse bias
 
-Tutorial questions: Ch2 Q7, Q8
+Tutorial questions: Ch2 Q7, Q8 · Past finals: 2016 Q1b · 2014 Q1e i · 2018 Q1c iv
 
 Slides: SSD_2, pages 25 to 48. Booklet §3.2.4.1 and §3.2.4.2 (pages 49 to 52).
 
@@ -26,6 +26,22 @@ So the battery changes the **barrier height**:
 When you see 🧠, stop.
 Answer it on paper first.
 Then click to check.
+
+---
+
+## 🎯 In the final
+
+Band diagram of a biased diode consistent with the doping, and fill-in-the-blanks on who diffuses where (2016 Q1b, 10 marks); the I–V curve with the bias direction trap (2014 Q1e i).
+
+---
+
+## ⭐ Learn by heart from this topic
+
+Not on the formula sheet.
+
+- Forward bias: E_F **splits by eV**, the barrier drops to e(V_bi − V), the depletion region **narrows**. Majority carriers **diffuse** across.
+- Reverse bias: barrier e(V_bi + V), depletion **widens**. The small current is minority carriers swept across, limited by their **supply**, not by the field.
+- The heavily doped side injects into the lightly doped side.
 
 ---
 

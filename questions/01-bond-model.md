@@ -7,7 +7,7 @@ Each answer says which notes section (§) it comes from.
 
 ---
 
-## Part A: Tutorial questions
+## Part A: Tutorial and past-final questions
 
 ### Q1 (Tutorial Ch1 Q1)
 
@@ -89,7 +89,67 @@ From: §4
 
 ---
 
-## Part B: Midterm-style questions
+### F2017-1a (Final 2017 Q1a)
+
+Give **all** correct statements that describe a hole: (i) an antielectron (ii) a positive mobile charge (iii) a positive ionised atom (iv) a positron (v) a proton (vi) a void, all "in a semiconductor". [2]
+
+<details><summary>Answer</summary>
+
+**(ii) only.** "A void" is wrong: an empty space cannot have a mass or a charge.
+
+From: ⭐ list
+
+</details>
+
+---
+
+### F2017-1b (Final 2017 Q1b)
+
+Why is the drift velocity of electrons higher than that of holes in intrinsic Si? [2]
+
+<details><summary>Answer</summary>
+
+Because the **electron mass is smaller** than the hole mass, so µ_n > µ_p and v = µℰ is bigger.
+
+From: ⭐ list, Topic 3
+
+</details>
+
+---
+
+### F2014-1a (Final 2014 Q1a)
+
+At room temperature, pure undoped Si has a certain density of electrons and holes. Give the concentration of holes and electrons. [2]
+
+<details><summary>Answer</summary>
+
+**n = p = nᵢ = 1.45 × 10¹⁰ cm⁻³.**
+
+From: ⭐ list
+
+</details>
+
+---
+
+### F2018-1c (Final 2018 Q1c i, ii)
+
+Yes or no. [1 each]
+
+(i) At room temperature, the valence band is almost completely filled with electrons covalently bound to the atoms.
+
+(ii) If the mass of holes were smaller than the mass of electrons, the hole mobility would be larger than the electron mobility.
+
+<details><summary>Answer</summary>
+
+(i) **Yes.** (ii) **Yes** (µ ∝ 1/m).
+
+From: ⭐ list
+
+</details>
+
+---
+
+## Part B: Exam-style questions
 
 These are in different formats from the tutorial.
 

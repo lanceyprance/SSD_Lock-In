@@ -6,7 +6,7 @@ Every question is a tutorial question (shown in brackets) with **new numbers** o
 
 **How to use it:**
 - Do it on paper, closed book, with only the [formula sheet](../formula-sheet.md).
-- The timer is 50 minutes. Ignore it if you just want to practise.
+- The site timer runs 2 hours. This one is shorter (about 50 minutes); ignore the timer if you just want to practise.
 - Mark yourself with the model answers. Each one says which notes section to go back to.
 
 **Constants (Si, 300 K):** $n_i$ = 1.45 × 10¹⁰ cm⁻³. $n_i^2$ ≈ 2.1 × 10²⁰ cm⁻⁶. kT = 0.026 eV. k = 8.62 × 10⁻⁵ eV/K. e = 1.6 × 10⁻¹⁹ C. $N_C$ = 3.2 × 10¹⁹ cm⁻³. $N_V$ = 1.8 × 10¹⁹ cm⁻³. $E_G$ = 1.12 eV. χ = 4.05 eV.

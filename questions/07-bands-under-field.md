@@ -7,7 +7,7 @@ Each answer says which notes section (§) it comes from.
 
 ---
 
-## Part A: Tutorial questions
+## Part A: Tutorial and past-final questions
 
 ### Q17 (Tutorial Ch1 Q17)
 
@@ -51,7 +51,45 @@ From: §5, drawing checklist
 
 ---
 
-## Part B: Midterm-style questions
+### F2018-1a (Final 2018 Q1a)
+
+![Fig. 1.1](../img/papers/2018-fig1-1.png)
+
+N_V = N_C. Redraw and add: (i) E_G and its value [2] (ii) E_i [2] (iii) ΔV between 0 and 5 µm [4] (iv) the field vector and size [4] (v) the cross section with a battery of the right value and polarity [4] (vi) for acceptor doping, the electron and hole flow [4].
+
+<details><summary>Answer</summary>
+
+![Official answer](../img/papers/ans-2018-q1a.png)
+
+(i) **E_G = 1 eV** (ii) E_i exactly **midgap** (N_C = N_V) (iii) ΔV = 0.2 eV/e = **0.2 V** (iv) **40 kV/m**, pointing to x = 0 (uphill) (v) **0.2 V, + at x = 5 µm** (vi) electrons **+x** (down the hill), holes **−x**.
+
+From: ⭐ list, §1 to §3
+
+</details>
+
+---
+
+### F2016-1a34 (Final 2016 Q1a iii and iv)
+
+![Fig. 1.1](../img/papers/2016-fig1-1.png)
+
+The n-Si of Topic 5 (E_C − E_F = 0.13 eV, E_i 0.56 eV above E_V) has 0.5 V across 1 µm. (iii) Draw E_C, E_V, E_i and give E_C and E_i at x = 0 and 1 µm. [6] (iv) Add the field and its size. [4]
+
+<details><summary>Answer</summary>
+
+![Official answer](../img/papers/ans-2016-q1aiii.png)
+
+PE = qV: E_C(1 µm) = E_C(0) − 0.5 eV. **E_C: 1.12 → 0.62 eV, E_i: 0.56 → 0.06 eV.**
+
+|ℰ| = 0.5 V ÷ 1 µm = **5 × 10⁵ V/m**, pointing uphill (towards x = 0).
+
+From: ⭐ list
+
+</details>
+
+---
+
+## Part B: Exam-style questions
 
 ---
 

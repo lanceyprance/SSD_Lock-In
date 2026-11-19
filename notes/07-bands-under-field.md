@@ -1,6 +1,6 @@
 # Topic 7 — Band diagram under an electric field (bands tilt)
 
-Tutorial questions: Ch1 Q17, Q18
+Tutorial questions: Ch1 Q17, Q18 · Past finals: 2018 Q1a · 2016 Q1a iii, iv
 
 Slides: SSD_1, pages 177 to 186. Booklet §2.9 (page 34).
 
@@ -26,6 +26,24 @@ Three things to remember:
 When you see 🧠, stop.
 Answer it on paper first.
 Then click to check.
+
+---
+
+## 🎯 In the final
+
+**Q1a two years running**: read a tilted band diagram, give ΔV, the field (size and direction), the battery polarity and the carrier flow (2018 Q1a, 20 marks; 2016 Q1a iii iv).
+
+---
+
+## ⭐ Learn by heart from this topic
+
+Not on the formula sheet.
+
+$$\Delta E = e\,\Delta V \qquad |\mathcal{E}| = \frac{\Delta V}{\Delta x}$$
+
+- 1 V across the bar = the bands drop **1 eV** towards the + end.
+- ℰ points **uphill** (towards where the bands are higher), from + to −.
+- Electrons roll **down** the bands, holes float **up**. E_G stays the same everywhere.
 
 ---
 

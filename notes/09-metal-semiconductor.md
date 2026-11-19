@@ -1,6 +1,6 @@
 # Topic 9 — Metal–semiconductor contact: ohmic vs Schottky
 
-Tutorial questions: Ch2 Q6 a–e
+Tutorial questions: Ch2 Q6 a–e · Past finals: 2018 Q1b · 2015 Q1e
 
 Slides: SSD_2, page 4 (it says "discussions in the booklet"). Booklet §3.1.1 and §3.1.2 (pages 38 to 41).
 
@@ -25,6 +25,25 @@ Which one you get depends on **two things**:
 When you see 🧠, stop.
 Answer it on paper first.
 Then click to check.
+
+---
+
+## 🎯 In the final
+
+Schottky vs ohmic with numbers: the workfunction relation, the barrier, and V_ON vs a pn diode (2018 Q1b, 10 marks); pick a metal from a table (2015 Q1e, 10 marks, with the twist that none worked).
+
+---
+
+## ⭐ Learn by heart from this topic
+
+Not on the formula sheet.
+
+| | n-type Si | p-type Si |
+|---|---|---|
+| Ohmic (accumulation) | φ_m < φ_s | φ_m > φ_s |
+| Schottky (depletion) | φ_m > φ_s | φ_m < φ_s |
+
+- Barrier for the Si side = |φ_m − φ_s|. A Schottky barrier is usually smaller than a pn diode's V_bi, so **V_ON(Schottky) < V_ON(pn)**.
 
 ---
 
