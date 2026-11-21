@@ -1,3 +1,4 @@
+"""One-off script used on SSD only (adds the final-exam layer to topics 1-14). Kept as an example, not reusable as is."""
 """One-off: add the final-exam layer (past finals, 'In the final', Learn by heart) to topics 1-14."""
 import re
 ROOT = '/home/user/SSD_Lock-In/'

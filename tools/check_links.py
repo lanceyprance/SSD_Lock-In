@@ -2,7 +2,7 @@
 import re, os, glob, sys
 bad = 0
 for f in sorted(glob.glob('**/*.md', recursive=True)):
-    if f.startswith('tools/'): continue
+    if f.startswith('tools/') or f == 'HANDOFF.md': continue  # HANDOFF.md holds template examples
     s = open(f).read(); d = os.path.dirname(f)
     for m in re.finditer(r'!?\[[^\]]*\]\(([^)\s]+)\)', s):
         href = m.group(1).split('#')[0]
